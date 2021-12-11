@@ -13,7 +13,7 @@ class UserController extends Controller
 {
     public function login()
     {
-        return view('auth.user.login');
+        return view('user.login');
     }
 
     public function google()
@@ -39,6 +39,6 @@ class UserController extends Controller
         }
         Auth::login($user, true);
 
-        return redirect(route('welcome'));
+        return redirect(route('user.dashboard'));
     }
 }
